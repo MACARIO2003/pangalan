@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* --- social bar styles --- */
+    .social-bar {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      display: flex;
+      gap: 12px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      text-decoration: none;
+      background: #000;   /* black background */
+      color: #fff;        /* white icons */
+      font-size: 18px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .social-link:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      background: #222; /* slightly lighter hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- social icons at top right -->
+  <div class="social-bar">
+    <a class="social-link" href="https://facebook.com/yourprofile" target="_blank" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="social-link" href="mailto:youremail@example.com" aria-label="Gmail">
+      <i class="fa-solid fa-envelope"></i>
+    </a>
+    <a class="social-link" href="viber://chat?number=%2B1234567890" aria-label="Viber">
+      <i class="fab fa-viber"></i>
+    </a>
+    <a class="social-link" href="https://instagram.com/yourprofile" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+  </div>
+
+  <!-- main content -->
+  <div class="container">
+    <div class="intro">
+      <h1>Hello, I'm Marc!</h1>
+      <p>Web Developer & IT Support</p>
+      <a href="about.html" class="btn">More About Me</a>
+    </div>
+    <div class="image">
+      <img src="viber_image_2025-10-02_16-43-48-360.jpg"Profile Picture">
+    </div>
+  </div>
+</body>
+</html>
