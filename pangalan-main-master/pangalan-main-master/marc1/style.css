@@ -1,0 +1,602 @@
+/* RESET + GLOBAL STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  color: #f5c906;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* OVERLAY FOR BETTER READABILITY */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25); /* adjust for brightness */
+  z-index: -1;
+}
+
+/* NAVIGATION BAR */
+header {
+  padding: 15px 10%;
+  position: fixed;
+  top: 15px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  background: (0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  color: #fff;
+  font-size: 10%;
+}
+
+header nav a {
+  color: #fff;
+  margin: 0 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header nav a:hover {
+  color: #ffd700;
+}
+
+/* SOCIAL BAR */
+.social-bar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+  z-index: 200;
+}
+
+.social-link {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  background: #ffd9008a;
+}
+
+/* INTRO TEXT */
+.intro {
+  padding-top: 100px;
+  padding-left: 10%;
+  padding-right: 10%;
+  max-width: 1000px;
+}
+
+.intro h1 {
+  font-size: 4rem;
+  margin-bottom: 15px;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #111;
+  text-decoration: none;
+  color: #111;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #111;
+  color: #fff;
+}
+
+/* IMAGE */
+.image img {
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  margin: 50px auto;
+  display: block;
+}
+
+/* BACKGROUND SETTINGS PER PAGE*/
+body.home {
+  background-image: url("arc3.jpg");
+}
+
+body.about {
+  background-image: url("arc3.jpg");
+}
+
+body.education {
+  background-image: url("arc3.jpg");
+}
+
+body.experience {
+  background-image: url("arc3.jpg");
+}
+
+body.project {
+  background-image: url("arc3.jpg");
+}
+
+/* HOME PAGE */
+body.home .intro {
+  text-align:justify;
+  margin-top: 150px;
+}
+body.home .intro h1 {
+  color: #ffd700;
+  font-size: 2.8rem;
+}
+body.home .intro p {
+  color: #f5f5f5;
+  font-size: 1.1rem;
+}
+
+/* ABOUT PAGE */
+body.about .intro {
+  text-align: justify;
+  margin-top: 150px;
+}
+body.about .intro h1 {
+  color: #ffd700;
+  font-size: 2.8rem;
+}
+body.about .intro p {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+}
+
+/* EXPERIENCE PAGE */
+body.experience .intro {
+  text-align: justify;
+  margin-top: 130px;
+}
+body.experience .intro h1 {
+  color: #ffffff;
+  font-size: 3rem;
+}
+body.experience .intro p {
+  color: #f2f2f2;
+  font-size: 1.2rem;
+}
+
+/* 💻 PROJECT PAGE */
+body.project .intro {
+  text-align: left;
+  margin-top: 200px;
+}
+body.project .intro h1 {
+  color: #f3efef;
+  font-size: 3rem;
+}
+body.project .intro p {
+  color: #faf7f7;
+  font-size: 1.2rem;
+}
+
+
+
+
+/*RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  header {
+    padding: 15px 5%;
+  }
+  .intro {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+  header nav {
+    margin-top: 10px;
+  }
+  .intro h1 {
+    font-size: 2.2rem;
+  }
+  .intro p {
+    font-size: 1rem;
+  }
+  .social-bar {
+    top: auto;
+    bottom: 20px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro {
+    margin-top: 80px;
+  }
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+  .intro p {
+    font-size: 0.95rem;
+  }
+  .image img {
+    width: 250px;
+  }
+}
+
+
+/* EDUCATION PAGE STYLE */
+.education-section {
+  padding-top: 150px;
+  padding-left: 8%; /*  right side margin */
+  color: #fff;
+  max-width: 900px; 
+  margin-left: 0; 
+}
+
+.education-section h1 {
+  color: #ffd700;
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+.school {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 25px 35px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  width: 85%; 
+}
+.school:hover {
+  transform: translateY(-5px);
+  background: rgba39(139, 138, 138, 0.308);
+}
+.school:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgb(0, 0, 0);
+}
+
+.school img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover; 
+  border-radius: 50%; /* para sa circle na puti */
+  background: #fff;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+
+.school-info {
+  max-width: 650px;
+}
+
+.school-info h2 {
+  font-size: 2.2rem;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.school-info p {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/*  Responsive Design */
+@media (max-width: 768px) {
+  .education-section {
+    padding-left: 5%;
+    max-width: 100%;
+  }
+
+  .school {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .school img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .school-info {
+    max-width: 100%;
+  }
+}
+
+/*  EXPERIENCE PAGE STYLES  */
+    .experience-section {
+      margin-top: 140px;
+      padding: 0 10% 60px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .experience-card {
+      display: flex;
+      flex-direction: column;
+      background: rgba(255, 255, 255, 0);
+      backdrop-filter: blur(4px);
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      padding: 20px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .experience-card:hover {
+  transform: translateY(-5px);
+  background: rgba(139, 138, 138, 0.308);
+}
+.experience-card:hover{ 
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgb(0, 0, 0);
+}
+
+    .exp-top {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .exp-top img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+
+    .exp-details h3 {
+      color: #f7cb06;
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+    }
+
+    .exp-details p {
+      color: #e0e0e0;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .exp-gallery {
+      display: flex;
+      justify-content:left;
+      gap: 200px;
+      margin-top: 20px;
+    }
+
+    .exp-gallery img {
+      width: 20%;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+    }
+
+    .exp-gallery img:hover {
+      transform: scale(1.05);
+    }
+  
+
+    /* PROJECT PAGE */
+.projects-container {
+  padding: 120px 10% 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.226);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(44, 43, 43, 0.041);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgb(0, 0, 0);
+}
+
+.project-card img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.project-card h3 {
+  font-size: 1.6rem;
+  color: #f8b705;
+  margin-bottom: 8px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #fffcfc;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 20px;
+}
+
+button.edit-btn { background: #2300e6; color: #fff; }
+button.edit-btn:hover { background: #136ac7; }
+
+button.delete-btn { background: #dc3545; color: #fff; }
+button.delete-btn:hover { background: #a71d2a; }
+
+button.save-btn { background: #29aa02; color: #fff; }
+button.save-btn:hover { background: #158d31; }
+:root {
+  /* Button Sizes */
+  --button-padding: 10px 20px;   /* top-bottom, left-right */
+  --button-font-size: 1rem;
+  --button-width: auto;           /* can be px, %, or auto */
+  --button-height: auto;          /* can be px, % or auto */
+
+  /* Button Shape */
+  --button-border-radius: 8px;    /* 0 = square, 50% = pill shape */
+  --button-border: none;          /* solid 2px black, etc. */
+}
+
+/* BUTTON STYLES */
+button.edit-btn,
+button.delete-btn,
+button.save-btn {
+  padding: var(--button-padding);
+  font-size: var(--button-font-size);
+  width: var(--button-width);
+  height: var(--button-height);
+  border-radius: var(--button-border-radius);
+  border: var(--button-border);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover effects can stay the same */
+button.edit-btn:hover { background: var(--color-edit-btn-hover); }
+button.delete-btn:hover { background: var(--color-delete-btn-hover); }
+button.save-btn:hover { background: var(--color-save-btn-hover); }
+
+.add-form {
+  background: rgba(216, 210, 210, 0.199);
+  backdrop-filter: blur(8px);
+  padding: 20px;
+  border-radius: 15px;
+  margin: 0 10% 60px;
+  box-shadow: 0 4px 12px rgba(68, 67, 67, 0.568);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+}
+.add-form:hover {
+  transform: translateY(-5px);
+  background: rgba(139, 138, 138, 0.308);
+}
+.add-form:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgb(0, 0, 0);
+}
+
+
+body.project .intro {
+  text-align: left;
+  margin-top: 200px;
+}
+body.project .intro h1 {
+  color: #f3efef;
+  font-size: 3rem;
+}
+body.project .intro p {
+  color: #faf7f7;
+  font-size: 1.2rem;
+}
+
+    /* important overides  */
+    body.project {
+      background-image: url("arc3.jpg"); /* Make sure the path is correct */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .project-container {
+      padding: 140px 10% 60px; /* leave space for fixed header */
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .add-form {
+      background: rgba(255,255,255,0.25);
+      backdrop-filter: blur(8px);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 0 10% 60px;
+      max-width: 600px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.0);
+    }
+
+    .add-form input,
+    .add-form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #aaa;
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    .add-form button {
+      background: #000;
+      color: #fff;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .add-form button:hover {
+      background: #333;
+    }
+ 
