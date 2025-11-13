@@ -28,7 +28,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.25); /* adjust for brightness */
+  background-image: url("arc3.jpg");
   z-index: -1;
 }
 
@@ -43,8 +43,6 @@ header {
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  background: (0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
 }
 
 header h1 {
@@ -175,7 +173,7 @@ body.home .intro p {
 /* ABOUT PAGE */
 body.about .intro {
   text-align: justify;
-  margin-top: 150px;
+  margin-top: 100px;
 }
 body.about .intro h1 {
   color: #ffd700;
@@ -452,6 +450,7 @@ body.project .intro p {
 .project-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 25px rgb(0, 0, 0);
+  
 }
 
 .project-card img {
@@ -519,7 +518,7 @@ button.delete-btn:hover { background: var(--color-delete-btn-hover); }
 button.save-btn:hover { background: var(--color-save-btn-hover); }
 
 .add-form {
-  background: rgba(216, 210, 210, 0.199);
+  background: rgba(10, 10, 10, 0.199);
   backdrop-filter: blur(8px);
   padding: 20px;
   border-radius: 15px;
@@ -532,7 +531,7 @@ button.save-btn:hover { background: var(--color-save-btn-hover); }
 }
 .add-form:hover {
   transform: translateY(-5px);
-  background: rgba(139, 138, 138, 0.308);
+  background: rgba(8, 8, 8, 0.233);
 }
 .add-form:hover{
   transform: translateY(-5px);
@@ -569,7 +568,7 @@ body.project .intro p {
     }
 
     .add-form {
-      background: rgba(255,255,255,0.25);
+      background: rgba(39, 38, 38, 0.199);
       backdrop-filter: blur(8px);
       padding: 20px;
       border-radius: 15px;
@@ -589,14 +588,84 @@ body.project .intro p {
     }
 
     .add-form button {
-      background: #000;
-      color: #fff;
+      background: rgb(245, 181, 7);
+      color: #000000;
       padding: 10px;
       border-radius: 6px;
       cursor: pointer;
     }
 
     .add-form button:hover {
-      background: #333;
+      background: #333232;
+      
     }
- 
+    
+
+ /* CONTACT PAGE STYLE */
+body.contact {
+  background: black;
+  color: rgb(245, 181, 7);
+}
+
+.contact-section {
+  padding: 120px 10%;
+  max-width: 900px;
+}
+
+.contact-section h1 {
+  color: #f8b705;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+  transition: none;
+  background: none;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(241, 227, 227, 0.08);
+  color: white;
+  font-size: 1rem;
+  box-shadow: 0 0 0 rgba(248, 183, 5, 0);
+  transition: all 0.1s ease;
+}
+
+.input-group input:hover,
+.input-group textarea:hover,
+.input-group input:focus,
+.input-group textarea:focus 
+  .project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgb(0, 0, 0);
+  outline: none;  
+}
+
+button {
+  background: #f8b705;
+  color: black;
+  font-weight: bold;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #333333;;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(3, 3, 3, 0.4);
+}
